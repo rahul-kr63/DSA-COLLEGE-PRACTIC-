@@ -104,7 +104,7 @@ class stack
     }
 };
 
-int *arr,top,size;
+// int *arr,top,size;
 void push(int value)
 {
    if(top==size-1)
@@ -159,53 +159,7 @@ int main()
    s.pop(433);
 }
      
-};
 
-void push(int value)
-{
-    node *temp=new node(value)
-    if(temp==NULL)
-    {
-     cout<<"stack overflow\n";
-    }
-    else{
-    temp->next=top;
-    top=temp;
-    size++;
-    }
-    
-};
-void pop()
-{
-  if(top==NULL)
-  {
-    cout<<"stack underflow\n";
-  }
-};
 
-void peek()
-{
-    if(top==NULL)
-    {
-    return -1; 
-    }
-    else
-    {
-      return top->data;
-    }
-};
-bool IsEmpty()
-{
-    return top==NULL;
-};
 
-int main()
-{
-    stack s;
-    s.push(7);
-    s.push(7);
-    s.pop(27);
-    s.push(7);
-
-}
 
