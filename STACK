@@ -1,3 +1,5 @@
+// implement linklist with stack
+
 #include <iostream>
 using namespace std;
 
@@ -84,7 +86,7 @@ int main()
 
 
 
-
+// implement stack with array
 
 #include<bits/stdc++.h>
 using namespace std;
