@@ -160,7 +160,46 @@ int main()
    s.pop(88);
    s.pop(433);
 }
-     
+   
+
+
+
+
+
+
+
+#include <iostream>
+ #include <vector>
+
+
+using namespace std;
+
+ printBoard(vector<vector<char>> &board) {
+ for (int i = 0; i < N; i++) { 
+for (int j = 0; j < N; j++) { 
+cout << board[i][j] << " ";
+ } 
+cout << endl; } cout << endl; 
+}
+
+void placeQueens(vector<vector<char>> &board) { 
+for (int i = 0; i < N; i++) 
+{ 
+board[i][(i * 2) % N] = 'Q';
+ // Place the queen in a unique column } }
+
+int main() { vector<vector<char>> board(N, vector<char>(N, '.'));
+
+placeQueens(board);
+
+cout << "Chessboard with queens placed without diagonal attacks:" << endl;
+printBoard(board);
+
+return 0;
+
+}
+
+  
 
 
 
