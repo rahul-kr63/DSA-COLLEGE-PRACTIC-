@@ -1,1 +1,82 @@
+#include<bits/stdc++.h>
+using namespace std;
 
+class node
+{
+   public:
+
+   int data;
+   node*left;
+   node*right;
+
+   node(int value)
+   {
+    data = value;
+    left=right=NULL;
+   }
+};
+
+void inorder(node*root)    // l n r
+{
+   if(root==NULL)
+   return ;
+
+   inorder(root->left);
+   cout<<root->data;
+   inorder(root->right);
+}
+void preorder(node*root)    // l r n
+{
+   if(root==NULL)
+   return ;
+
+   preorder(root->left);
+   preorder(root->right);
+   cout<<root->data;
+}
+
+void postorder(node*root)    //  n l r 
+{
+   if(root==NULL)
+   return ;
+
+   cout<<root->data;
+   postorder(root->left);
+   postorder(root->right);
+}
+
+node *BinaryTree()
+{
+   int x;
+   cin>>x;
+
+   if(x==-1)
+   {
+    return NULL;
+   }
+
+   node*temp= new node(x);
+   cout<<"enter the left"<<x<<" : ";
+   temp->left=BinaryTree();
+   cout<<"enter the right child"<<x<<"  : ";
+   temp->right=BinaryTree();
+   return temp;
+
+}
+
+int main()
+{
+   node*root;
+
+    cout<<" enter the root node :";
+    root=BinaryTree();  
+    
+    cout<<"inorder traversal:";
+    preorder(root);
+
+    cout<<"preorder traversal:";
+    inorder(root);
+
+    cout<<"postorder traversal:";
+    postorder(root);
+}
